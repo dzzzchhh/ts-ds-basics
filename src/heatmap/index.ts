@@ -3,6 +3,7 @@ interface IHeatmap {
   length: number;
   heatmap: object;
 }
+
 export function composeHeatmap(characterSequence: string): IHeatmap {
   let uniqueTokens = 0;
   const heatmap = characterSequence.split("").reduce((a, c) => {
