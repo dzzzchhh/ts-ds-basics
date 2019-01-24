@@ -2,20 +2,10 @@ import { expect } from "chai";
 import "mocha";
 
 interface ITestCase {
-  testCaseLabel: string;
-  testInput: string;
-  expectedResult: string;
+  testCaseLabel?: string;
+  testInput: any;
+  expectedResult: any;
 }
-
-const testCaseComposer = (
-  testCaseLabel: string,
-  testInput: string,
-  expectedResult: string
-): ITestCase => ({
-  expectedResult,
-  testCaseLabel,
-  testInput
-});
 
 export class FunctionalTestSuite {
   private testCases: ITestCase[] = [];
