@@ -31,7 +31,7 @@ abstract class Vehicle {
    * @since 1.0.0
    * @abstract
    */
-  public abstract honk();
+  abstract honk();
 }
 
 /**
