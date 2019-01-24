@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { ArrayQueue } from "./index";
+import { ArrayQueue } from "../src/queue";
 
 let queue: ArrayQueue;
 beforeEach(() => {

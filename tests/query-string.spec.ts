@@ -1,5 +1,5 @@
-import { FunctionalTestSuite } from "../../../tests";
-import { queryStringComposer } from "./";
+import { FunctionalTestSuite } from ".";
+import { queryStringComposer } from "../src/strings/query-string";
 
 const testObject = { name: "Mike", age: 24, country: "USA" };
 const expectedOutput = "?name=Mike&age=24&country=USA";

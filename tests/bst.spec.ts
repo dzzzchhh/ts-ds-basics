@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { BinarySearchTree } from "./index";
+import { BinarySearchTree } from "../src/bst/index";
 
 describe("BST", () => {
   it("should perform search", () => {

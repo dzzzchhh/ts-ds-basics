@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 
-import { isPalindrome } from "./";
+import { isPalindrome } from "../src/palindromes";
 
 const palindrome = "papap";
 const complexPalindrome = "Dogma? I am God";

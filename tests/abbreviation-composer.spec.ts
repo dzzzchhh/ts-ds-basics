@@ -1,5 +1,5 @@
-import { FunctionalTestSuite } from "../../../tests";
-import { abbreviationComposer } from "./";
+import { FunctionalTestSuite } from ".";
+import { abbreviationComposer } from "../src/strings/abbreviation-composer";
 
 const abbreviationSuite = new FunctionalTestSuite(
   "Abbreviation",

@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 
-import { nth } from "./";
+import { nth } from "../src/lists/n-th-element";
 
 const list = [1, 2, 3, 4, 5, 6, 7, 8];
 describe("nth", () => {
