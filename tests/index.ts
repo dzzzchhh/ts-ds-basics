@@ -21,7 +21,7 @@ export class FunctionalTestSuite {
     describe(this.suiteName, () => {
       this.testCases.forEach(testCase => {
         it(testCase.testCaseLabel, () => {
-          expect(this.testFunction(testCase.testInput)).to.eq(
+          expect(this.testFunction(testCase.testInput)).to.eql(
             testCase.expectedResult
           );
         });
