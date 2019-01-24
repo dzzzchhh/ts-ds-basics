@@ -3,7 +3,7 @@ function Vehicle(vendor: string) {
 }
 
 Vehicle.prototype.start = function() {
-  return "START";
+  return `START the ${this.vendor}`;
 };
 
 export function Car(vendor: string, interiorColor: string) {
