@@ -18,13 +18,11 @@ const testCaseComposer = (
 });
 
 export class FunctionalTestSuite {
-  private testCases: ITestCase[];
+  private testCases: ITestCase[] = [];
   constructor(
     private suiteName: string,
     private testFunction: (input: any) => any
-  ) {
-    this.testCases = [];
-  }
+  ) {}
   public addCase(testCase: ITestCase) {
     this.testCases.push(testCase);
     return this;
