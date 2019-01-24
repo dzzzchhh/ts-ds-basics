@@ -3,4 +3,4 @@ interface INthParameters {
   th: number;
 }
 export const nth = (params: INthParameters): any[] =>
-  params.list.filter((item, index) => (index+1) % params.th === 0);
+  params.list.filter((item, index) => (index + 1) % params.th === 0);
