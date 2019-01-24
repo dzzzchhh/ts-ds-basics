@@ -23,4 +23,10 @@ describe("Testing object prototypal inheritance", function() {
       `This is a ${truckVendor} truck with ${numberOfCarriages} carriages`
     );
   });
+  it("car should inherit start() method from base Vehicle class", function() {
+    expect(BMW.start()).to.eq("START");
+  });
+  it("truck should inherit start() method from base Vehicle class", function() {
+    expect(DAF.start()).to.eq("START");
+  });
 });
