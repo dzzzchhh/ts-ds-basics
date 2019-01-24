@@ -15,7 +15,7 @@ export function composeHeatmap(characterSequence: string): IHeatmap {
   }, {});
   return {
     heatmap,
-    uniqueTokens,
-    length: characterSequence.length
+    length: characterSequence.length,
+    uniqueTokens
   };
 }

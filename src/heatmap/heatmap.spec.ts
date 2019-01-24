@@ -1,28 +1,23 @@
-import { composeHeatmap } from "./";
 import { expect } from "chai";
 import "mocha";
-const testString = "This_is_great";
+import { composeHeatmap } from "./";
+const testString = "abcdeabc";
 
-describe("Heatmap testing", function() {
+describe("Heatmap testing", () => {
   const result = composeHeatmap(testString);
-  it("should compose correct heatmap", function() {
+  it("should compose correct heatmap", () => {
     expect(result.heatmap).to.deep.equal({
-      T: 1,
-      h: 1,
-      i: 2,
-      s: 2,
-      _: 2,
-      g: 1,
-      r: 1,
-      e: 1,
-      a: 1,
-      t: 1
+      a: 2,
+      b: 2,
+      c: 2,
+      d: 1,
+      e: 1
     });
   });
-  it("should calculate string length", function() {
-    expect(result.length).to.equal(13);
+  it("should calculate string length", () => {
+    expect(result.length).to.equal(8);
   });
-  it("should calculate number of unique tokens", function() {
-    expect(result.uniqueTokens).to.equal(10);
+  it("should calculate number of unique tokens", () => {
+    expect(result.uniqueTokens).to.equal(5);
   });
 });

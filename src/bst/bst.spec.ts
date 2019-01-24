@@ -1,9 +1,9 @@
-import { BinarySearchTree } from "./index";
 import { expect } from "chai";
 import "mocha";
+import { BinarySearchTree } from "./index";
 
-describe("BST", function() {
-  it("should perform search", function() {
+describe("BST", () => {
+  it("should perform search", () => {
     const tree = new BinarySearchTree(50);
     tree
       .insertNode(76)
@@ -13,6 +13,5 @@ describe("BST", function() {
       .insertNode(100)
       .insertNode(64)
       .insertNode(52);
-    debugger;
   });
 });

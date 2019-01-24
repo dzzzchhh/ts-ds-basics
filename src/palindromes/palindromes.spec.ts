@@ -7,14 +7,14 @@ const palindrome = "papap";
 const complexPalindrome = "Dogma? I am God";
 const invalidString = "An invalid string";
 
-describe("Palindromes", function() {
-  it("should correctly detect one-word palindromes", function() {
-    expect(isPalindrome(palindrome)).to.be.true;
+describe("Palindromes", () => {
+  it("should correctly detect one-word palindromes", () => {
+    expect(isPalindrome(palindrome)).to.eq(true);
   });
-  it("should correctly detect phrase palindromes", function() {
-    expect(isPalindrome(complexPalindrome)).to.be.true;
+  it("should correctly detect phrase palindromes", () => {
+    expect(isPalindrome(complexPalindrome)).to.eq(true);
   });
-  it("should correctly detect non-palindromes", function() {
-    expect(isPalindrome(invalidString)).to.be.false;
+  it("should correctly detect non-palindromes", () => {
+    expect(isPalindrome(invalidString)).to.eq(false);
   });
 });

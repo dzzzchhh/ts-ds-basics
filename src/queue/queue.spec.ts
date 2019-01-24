@@ -1,31 +1,31 @@
-import { ArrayQueue } from "./index";
 import { expect } from "chai";
 import "mocha";
+import { ArrayQueue } from "./index";
 
 let queue: ArrayQueue;
 beforeEach(() => {
   queue = new ArrayQueue(1);
 });
 
-describe("Queue", function() {
-  it("should correctly create queues", function() {
+describe("Queue", () => {
+  it("should correctly create queues", () => {
     queue.enqueue(2);
     expect(queue.size()).to.eq(2);
   });
-  it("should correctly dequeue", function() {
+  it("should correctly dequeue", () => {
     queue.enqueue(2).enqueue(3);
     expect(queue.dequeue()).to.eq(3);
     expect(queue.dequeue()).to.eq(2);
     expect(queue.dequeue()).to.eq(1);
-    expect(queue.dequeue()).to.be.undefined;
+    expect(queue.dequeue()).to.eq(undefined);
   });
-  it("should peek correctly", function() {
+  it("should peek correctly", () => {
     queue.enqueue(2).enqueue(3);
     expect(queue.peek()).to.eq(1);
   });
-  it("should correctly detect isEmpty()", function() {
-    expect(queue.isEmpty()).to.be.false;
+  it("should correctly detect isEmpty()", () => {
+    expect(queue.isEmpty()).to.eq(false);
     queue.dequeue();
-    expect(queue.isEmpty()).to.be.true;
+    expect(queue.isEmpty()).to.eq(true);
   });
 });

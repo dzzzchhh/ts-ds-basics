@@ -1,6 +1,6 @@
-import { Stack } from "./index";
 import { expect } from "chai";
 import "mocha";
+import { Stack } from "./index";
 
 let stack: Stack;
 beforeEach(() => {
@@ -13,17 +13,17 @@ describe("Stacks", () => {
     stack.push(2);
     expect(stack.getSize()).to.equal(2);
   });
-  it("should correctly pop items", function() {
+  it("should correctly pop items", () => {
     stack.push(2).push(3);
     stack.pop();
     expect(stack.getSize()).to.equal(2);
   });
-  it("should correctly handle isEmpty() call", function() {
-    expect(stack.isEmpty()).to.be.false;
+  it("should correctly handle isEmpty() call", () => {
+    expect(stack.isEmpty()).to.equal(false);
     stack.pop();
-    expect(stack.isEmpty()).to.be.true;
+    expect(stack.isEmpty()).to.equal(true);
   });
-  it("should peek correctly", function() {
+  it("should peek correctly", () => {
     expect(
       stack
         .push(2)

@@ -1,8 +1,9 @@
 import { expect } from "chai";
 import "mocha";
 
-import { Truck, Car } from "./";
-import { Truck as ClassTruck, Car as ClassCar } from "./classes";
+import { Car, Truck } from "./";
+import { Car as ClassCar } from "./Car";
+import { Truck as ClassTruck } from "./Truck";
 
 const carVendor = "BMW";
 const carInteriorColor = "red";
@@ -14,16 +15,16 @@ const DAF = new Truck(truckVendor, numberOfCarriages);
 const BMWClass = new ClassCar(carVendor, carInteriorColor);
 const DAFClass = new ClassTruck(truckVendor, numberOfCarriages);
 
-describe("Testing object prototypal inheritance", function() {
-  it("should have honk method on a Vehicle class that returns vendor", function() {
+describe("Testing object prototypal inheritance", () => {
+  it("should have honk method on a Vehicle class that returns vendor", () => {
     expect(BMW.honk()).to.equal(carVendor);
     expect(BMWClass.honk()).to.equal(carVendor);
   });
-  it("should have interiror color defined for the Car", function() {
+  it("should have interiror color defined for the Car", () => {
     expect(BMW.interiorColor).to.eq(carInteriorColor);
     expect(BMWClass.interiorColor).to.eq(carInteriorColor);
   });
-  it("should have honk method on Truck class that returns vendor with some info", function() {
+  it("should have honk method on Truck class that returns vendor with some info", () => {
     expect(DAF.honk()).to.equal(
       `This is a ${truckVendor} truck with ${numberOfCarriages} carriages`
     );
@@ -31,11 +32,11 @@ describe("Testing object prototypal inheritance", function() {
       `This is a ${truckVendor} truck with ${numberOfCarriages} carriages`
     );
   });
-  it("car should inherit start() method from base Vehicle class", function() {
+  it("car should inherit start() method from base Vehicle class", () => {
     expect(BMW.start()).to.eq(`START the ${carVendor}`);
     expect(BMWClass.start()).to.eq(`START the ${carVendor}`);
   });
-  it("truck should inherit start() method from base Vehicle class", function() {
+  it("truck should inherit start() method from base Vehicle class", () => {
     expect(DAF.start()).to.eq(`START the ${truckVendor}`);
     expect(DAFClass.start()).to.eq(`START the ${truckVendor}`);
   });
