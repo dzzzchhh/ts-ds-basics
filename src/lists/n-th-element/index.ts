@@ -2,5 +2,13 @@ interface INthParameters {
   list: any[];
   th: number;
 }
-export const nth = (params: INthParameters): any[] =>
-  params.list.filter((item, index) => (index + 1) % params.th === 0);
+
+/**
+ * Compose a list containing every n-th item of the original list
+ *
+ * @param {Array} list  List to process
+ * @param {number} th Every "th" shall be selected
+ * @returns {Array} List with every n-th element
+ */
+export const nth = ({ list, th }: INthParameters): any[] =>
+  list.filter((item, index) => (index + 1) % th === 0);
