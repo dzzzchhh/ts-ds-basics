@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { composeHeatmap } from "../src/heatmap";
+import { composeHeatmap } from "../src/strings/heatmap";
 const testString = "abcdeabc";
 
 describe("Heatmap testing", () => {

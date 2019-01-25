@@ -1,5 +1,5 @@
 import { FunctionalTestSuite } from ".";
-import { isPalindrome } from "../src/palindromes";
+import { isPalindrome } from "../src/strings/is-palindrome";
 
 const palindrome = "papap";
 const complexPalindrome = "Dogma? I am God";
