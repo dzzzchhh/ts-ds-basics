@@ -83,7 +83,8 @@ composeAbbreviation("United Nations"); // -> "UN
 composeQueryString({ version: 1, user: "Mike", country: "BLR" }); // -> “?version=1&user=Mike&country=BLR”
 ```
 
-2. Write a function that excludes all integers that are <= 1000 from a string of integers. (TBD)
+2. Write a function that excludes all integers that are <= 1000 from a string of integers.
+   ([Code](./src/strings/filter-by-digit-count.ts)/[Test](./tests/strings-filter-by-digit-count.spec.ts))
 
 ```javascript
 greaterThan1000("200 150 1200 400 20 1400"); // -> “1200 1400”.
