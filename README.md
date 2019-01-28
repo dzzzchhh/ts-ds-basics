@@ -107,7 +107,12 @@ getFirstRecurringCharacter("ABCDEA"); // -> “A”
 ## Level 3
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
-   Example: 22:35 -> 10.35PM, 8:15->8:15AM
+
+```javascript
+convertTime("22:35"); // -> “10:35 PM”
+convertTime("08:15"); // -> “08:15 AM”
+```
+
 2. Write a function that takes in a string and an array of characters. If a string has a character that’s included in an array then make the character uppercase.
    ([Code](./src/strings/to-uppercase.ts)/[Test](./tests/to-uppercase.spec.ts))
 
