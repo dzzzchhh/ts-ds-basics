@@ -105,6 +105,14 @@ countValueOccurences([1, 2, 3, 4, 5, 2, 3, 1, 2], 2); // -> 3
 getFirstRecurringCharacter("ABCDEA"); // -> “A”
 ```
 
+6. Write a function that takes in a string and returns whether the first character of a string is in uppercase
+   ([Code](./src/strings/is-first-character-uppercase.ts)/[Test](./tests/strings-is-first-character-uppercase.spec.ts))
+
+```javascript
+isFirstCharacterUppercase("ABCDEA"); // -> true
+isFirstCharacterUppercase("abcdea"); // -> false
+```
+
 ## Level 3
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
