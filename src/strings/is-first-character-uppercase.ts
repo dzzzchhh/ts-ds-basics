@@ -6,5 +6,5 @@
  * @returns
  */
 export function isFirstCharacterUppercase(characterSequence: string) {
-  return /^[A-Z]/g.test(characterSequence);
+  return /^[A-Z]/.test(characterSequence);
 }
