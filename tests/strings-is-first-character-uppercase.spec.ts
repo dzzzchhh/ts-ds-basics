@@ -20,4 +20,14 @@ new FunctionalTestSuite(
     testCaseLabel: "2nd invalid case",
     testInput: "2nd invalid case"
   })
+  .addCase({
+    expectedResult: true,
+    testCaseLabel: "ABC",
+    testInput: "ABC"
+  })
+  .addCase({
+    expectedResult: false,
+    testCaseLabel: "abc",
+    testInput: "abc"
+  })
   .run();
