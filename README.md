@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.com/dzmchar/ts-ds-basics.svg?branch=master)](https://travis-ci.com/dzmchar/ts-ds-basics)
 
-Set of tasks for JavaScript interviews
-
 ## Level 1
 
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
@@ -27,20 +25,23 @@ const salariesExample = {
 sumSalaries(salariesExample); // -> 200
 ```
 
-4. Write a function that checks whether or not string is a palindrome([Code](./src/strings/is-palindrome.ts)/[Test](./tests/palindromes.spec.ts))
+4. Write a function that checks whether or not string is a palindrome
+   ([Code](./src/strings/is-palindrome.ts)/[Test](./tests/palindromes.spec.ts))
 
 ```javascript
 isPalindrome("xanax"); // -> true
 isPalindrome("xanax2"); // -> false
 ```
 
-5. Write a function that takes in array of simple values (numbers,strings) and returns original array without duplicated records ([Code](./src/lists/unique.ts)/[Test](./tests/lists-uniqe.spec.ts))
+5. Write a function that takes in array of simple values (numbers,strings) and returns original array without duplicated records
+   ([Code](./src/lists/unique.ts)/[Test](./tests/lists-uniqe.spec.ts))
 
 ```javascript
 unique([1, 2, 3, 4, 5, 2, 3, 4, 1]); // -> [1,2,3,4,5]
 ```
 
-6. Write a function that returns every n-th element of an array ([Code](./src/lists/n-th-element.ts)/[Test](./tests/n-th-element.spec.ts))
+6. Write a function that returns every n-th element of an array
+   ([Code](./src/lists/n-th-element.ts)/[Test](./tests/n-th-element.spec.ts))
 
 ```javascript
 getNthElement([1, 2, 3, 4, 5, 6, 7, 8], 4); // -> [4,8]
@@ -65,9 +66,67 @@ isBlank(""); // -> true
 isBlank("1"); // -> false
 ```
 
-10. Write a function that takes in a string and returns its abbreviation ([Code](./src/strings/abbreviation-composer.ts)/[Test](./tests/abbreviation-composer.spec.ts))
+10. Write a function that takes in a string and returns its abbreviation
+    ([Code](./src/strings/abbreviation-composer.ts)/[Test](./tests/abbreviation-composer.spec.ts))
 
 ```javascript
 composeAbbreviation("Denial Of Service"); // -> "DOS"
 composeAbbreviation("United Nations"); // -> "UN
+```
+
+## Level 2
+
+1. Query string builder
+   ([Code](./src/strings/query-string-composer.ts)/[Test](./tests/query-string.spec.ts))
+
+```javascript
+composeQueryString({ version: 1, user: "Mike", country: "BLR" }); // -> “?version=1&user=Mike&country=BLR”
+```
+
+2. Write a function that excludes all integers that are <= 1000 from a string of integers. (TBD)
+
+```javascript
+greaterThan1000("200 150 1200 400 20 1400"); // -> “1200 1400”.
+```
+
+3. Create a class hierarchy. Function prototyping or class syntax can be used. (TBD)
+4. Write a function to count the occurrences of a value in an array.
+   ([Code](./src/lists/occurence.ts)/[Test](./tests/lists-occurence.spec.ts))
+
+```javascript
+countValueOccurences([1, 2, 3, 4, 5, 2, 3, 1, 2], 2); // -> 3
+```
+
+5. Write a function that returns first recurring character in a string.
+   ([Code](./src/strings/query-string-composer.ts)/[Test](./tests/query-string.spec.ts))
+
+```javascript
+getFirstRecurringCharacter("ABCDEA"); // -> “A”
+```
+
+## Level 3
+
+1. Write a function that takes time string and converts it to AM/PM format. (TBD)
+   Example: 22:35 -> 10.35PM, 8:15->8:15AM
+2. Write a function that takes in a string and an array of characters. If a string has a character that’s included in an array then make the character uppercase.
+   ([Code](./src/strings/to-uppercase.ts)/[Test](./tests/to-uppercase.spec.ts))
+
+```javascript
+targetUppercase("123xyzabc", ["x", "c"]); // -> ‘123XyzabC’;
+```
+
+Example:
+
+3. Write a function that takes in a string and returns an object with the following properties of the given string:
+   ([Code](./src/strings/heatmap.ts)/[Test](./tests/heatmap.spec.ts))
+
+- length of the string
+- number of unique characters used to compose a string
+- Hash table with the following format -> {character: number of times character occurs in the string};
+
+4. Write a function that takes a string and converts it to camel case
+   ([Code](./src/strings/to-camel-case.ts)/[Test](./tests/strings-to-camel-case.spec.ts))
+
+```javascript
+toCamelCase("A string of values"); // -> "aStringOfValues";
 ```
