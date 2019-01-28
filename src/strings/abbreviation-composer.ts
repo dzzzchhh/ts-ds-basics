@@ -8,7 +8,6 @@
  */
 export const abbreviationComposer = (characterSequence: string): string =>
   characterSequence
-    .split(" ")
-    .map(i => i[0])
+    .match(/\b[\w]/gi)
     .join("")
     .toUpperCase();
