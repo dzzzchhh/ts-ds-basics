@@ -74,6 +74,15 @@ composeAbbreviation("Denial Of Service"); // -> "DOS"
 composeAbbreviation("United Nations"); // -> "UN
 ```
 
+11. Write a function that takes in a list of numbers and returns difference between smallest and largest value
+    ([Code](./src/lists/numeric-value-diff.ts)/[Test](./tests/numberic-value-diff.spec.ts))
+
+```javascript
+arrayValueDiff([1, 2, 3, 4]); // -> 3
+arrayValueDiff([-1, 2, 3, 5]); // -> 6
+arrayValueDiff([3, 3, 3]); // -> 0
+```
+
 ## Level 2
 
 1. Query string builder
