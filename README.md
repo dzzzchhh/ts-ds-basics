@@ -26,7 +26,7 @@ sumSalaries(salariesExample); // -> 200
 ```
 
 4. Write a function that checks whether or not string is a palindrome
-   ([Code](./src/strings/is-palindrome.ts)/[Test](./tests/palindromes.spec.ts))
+   ([Code](./src/strings/is-palindrome.ts)/[Test](tests/strings-palindromes.spec.ts))
 
 ```javascript
 isPalindrome("xanax"); // -> true
@@ -41,7 +41,7 @@ unique([1, 2, 3, 4, 5, 2, 3, 4, 1]); // -> [1,2,3,4,5]
 ```
 
 6. Write a function that returns every n-th element of an array
-   ([Code](./src/lists/n-th-element.ts)/[Test](./tests/n-th-element.spec.ts))
+   ([Code](./src/lists/n-th-element.ts)/[Test](tests/lists-n-th-element.spec.ts))
 
 ```javascript
 getNthElement([1, 2, 3, 4, 5, 6, 7, 8], 4); // -> [4,8]
@@ -67,7 +67,7 @@ isBlank("1"); // -> false
 ```
 
 10. Write a function that takes in a string and returns its abbreviation
-    ([Code](./src/strings/abbreviation-composer.ts)/[Test](./tests/abbreviation-composer.spec.ts))
+    ([Code](./src/strings/abbreviation-composer.ts)/[Test](tests/strings-abbreviation-composer.spec.ts))
 
 ```javascript
 composeAbbreviation("Denial Of Service"); // -> "DOS"
@@ -75,7 +75,7 @@ composeAbbreviation("United Nations"); // -> "UN
 ```
 
 11. Write a function that takes in a list of numbers and returns difference between smallest and largest value
-    ([Code](./src/lists/numeric-value-diff.ts)/[Test](./tests/numberic-value-diff.spec.ts))
+    ([Code](./src/lists/numeric-value-diff.ts)/[Test](tests/lists-numeric-value-diff.spec.ts))
 
 ```javascript
 arrayValueDiff([1, 2, 3, 4]); // -> 3
@@ -86,7 +86,7 @@ arrayValueDiff([3, 3, 3]); // -> 0
 ## Level 2
 
 1. Query string builder
-   ([Code](./src/strings/query-string-composer.ts)/[Test](./tests/query-string.spec.ts))
+   ([Code](./src/strings/query-string-composer.ts)/[Test](tests/strings-query-string.spec.ts))
 
 ```javascript
 composeQueryString({ version: 1, user: "Mike", country: "BLR" }); // -> “?version=1&user=Mike&country=BLR”
@@ -108,7 +108,7 @@ countValueOccurences([1, 2, 3, 4, 5, 2, 3, 1, 2], 2); // -> 3
 ```
 
 5. Write a function that returns first recurring character in a string.
-   ([Code](./src/strings/query-string-composer.ts)/[Test](./tests/query-string.spec.ts))
+   ([Code](./src/strings/query-string-composer.ts)/[Test](tests/strings-query-string.spec.ts))
 
 ```javascript
 getFirstRecurringCharacter("ABCDEA"); // -> “A”
@@ -132,7 +132,7 @@ convertTime("08:15"); // -> “08:15 AM”
 ```
 
 2. Write a function that takes in a string and an array of characters. If a string has a character that’s included in an array then make the character uppercase.
-   ([Code](./src/strings/to-uppercase.ts)/[Test](./tests/to-uppercase.spec.ts))
+   ([Code](./src/strings/to-uppercase.ts)/[Test](tests/strings-to-uppercase.spec.ts))
 
 ```javascript
 targetUppercase("123xyzabc", ["x", "c"]); // -> ‘123XyzabC’;
@@ -141,7 +141,7 @@ targetUppercase("123xyzabc", ["x", "c"]); // -> ‘123XyzabC’;
 Example:
 
 3. Write a function that takes in a string and returns an object with the following properties of the given string:
-   ([Code](./src/strings/heatmap.ts)/[Test](./tests/heatmap.spec.ts))
+   ([Code](./src/strings/heatmap.ts)/[Test](tests/strings-heatmap.spec.ts))
 
 - length of the string
 - number of unique characters used to compose a string

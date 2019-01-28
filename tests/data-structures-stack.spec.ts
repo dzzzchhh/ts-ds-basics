@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { Stack } from "../src/stack";
+import { Stack } from "../src/data-structures/stack";
 
 let stack: Stack;
 beforeEach(() => {

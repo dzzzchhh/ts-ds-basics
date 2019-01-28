@@ -1,9 +1,9 @@
 import { expect } from "chai";
 import "mocha";
 
-import { Car, Truck } from "../src/prototypes";
-import { Car as ClassCar } from "../src/prototypes/Car";
-import { Truck as ClassTruck } from "../src/prototypes/Truck";
+import { Car, Truck } from "../src/oop/basics";
+import { Car as ClassCar } from "../src/oop/basics/Car";
+import { Truck as ClassTruck } from "../src/oop/basics/Truck";
 
 const carVendor = "BMW";
 const carInteriorColor = "red";
