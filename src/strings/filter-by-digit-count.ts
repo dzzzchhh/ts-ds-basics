@@ -11,13 +11,12 @@ interface IDigitFilterProps {
  * @export
  * @example
  *
- * filterByDigitCount({characterSequence:"100 200 2000 3000",digits:4}) // -> "100 200"
+ * filterByDigitCount({characterSequence:"100 200 2000 3000",digits:4}) // -> "2000 3000"
  */
 export function filterByDigitCount({
   characterSequence,
   digits
 }: IDigitFilterProps) {
-  // TODO: optimize regexp
-  const replaceMatcher = new RegExp(`\\d{${digits},} | \\d{${digits},}`, "g");
-  return characterSequence.replace(replaceMatcher, "");
+  const replaceMatcher = new RegExp(`\\d{${digits},}`, "g");
+  return characterSequence.match(replaceMatcher).join(" ");
 }
