@@ -2,8 +2,6 @@
 
 ## Level 1
 
----
-
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
 
 ```javascript
@@ -87,8 +85,6 @@ arrayValueDiff([3, 3, 3]); // -> 0
 
 ## Level 2
 
----
-
 1. Query string builder
    ([Code](./src/strings/query-string-composer.ts)/[Test](tests/strings-query-string.spec.ts))
 
@@ -150,8 +146,6 @@ isFirstCharacterUppercase("abcdea"); // -> false
 ```
 
 ## Level 3
-
----
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
 
