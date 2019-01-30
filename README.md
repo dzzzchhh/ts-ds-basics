@@ -176,3 +176,11 @@ Example:
 ```javascript
 toCamelCase("A string of values"); // -> "aStringOfValues";
 ```
+
+## Regular expressions (TBD)
+
+1. Given a string return a list of all capitalized words
+
+```javascript
+getCapitalizedWords("Visit United States of America today!"); // -> ["Visit","United","States","America"]
+```
