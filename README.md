@@ -161,14 +161,28 @@ convertTime("08:15"); // -> “08:15 AM”
 targetUppercase("123xyzabc", ["x", "c"]); // -> ‘123XyzabC’;
 ```
 
-Example:
-
 3. Write a function that takes in a string and returns an object with the following properties of the given string:
    ([Code](./src/strings/heatmap.ts)/[Test](tests/strings-heatmap.spec.ts))
 
 - length of the string
 - number of unique characters used to compose a string
 - Hash table with the following format -> {character: number of times character occurs in the string};
+
+```javascript
+const string = "abcdeabc";
+const heatmap = getHeatmap(string);
+/* 
+heatmap.length -> 8;
+heatmap.uniqueTokensCount -> 5;
+heatmap.map -> {
+      a: 2,
+      b: 2,
+      c: 2,
+      d: 1,
+      e: 1
+    };
+*/
+```
 
 4. Write a function that takes a string and converts it to camel case
    ([Code](./src/strings/to-camel-case.ts)/[Test](./tests/strings-to-camel-case.spec.ts))
