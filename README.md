@@ -191,9 +191,10 @@ heatmap.map -> {
 toCamelCase("A string of values"); // -> "aStringOfValues";
 ```
 
-## Regular expressions (TBD)
+## Regular expressions
 
 1. Given a string return a list of all capitalized words
+   ([Code](./src/regexp/get-capitalized-words-list.ts)/[Test](./tests/regexp-get-capitalized-words-list.spec.ts))
 
 ```javascript
 getCapitalizedWords("Visit United States of America today!"); // -> ["Visit","United","States","America"]
