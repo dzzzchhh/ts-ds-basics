@@ -1,6 +1,6 @@
 /**
  * Given a string returns a list of all words that start with a capital letter
- * @param words
+ * @param {string} words
  * @returns {string[]}
  * @example
  * getCapitalizedWordsList("Apple is located in California") // -> ["Apple","California"]
