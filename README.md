@@ -2,6 +2,8 @@
 
 ## Level 1
 
+---
+
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
 
 ```javascript
@@ -85,6 +87,8 @@ arrayValueDiff([3, 3, 3]); // -> 0
 
 ## Level 2
 
+---
+
 1. Query string builder
    ([Code](./src/strings/query-string-composer.ts)/[Test](tests/strings-query-string.spec.ts))
 
@@ -99,7 +103,30 @@ composeQueryString({ version: 1, user: "Mike", country: "BLR" }); // -> “?vers
 greaterThan1000("200 150 1200 400 20 1400"); // -> “1200 1400”.
 ```
 
-3. Create a class hierarchy. Function prototyping or class syntax can be used. (TBD)
+3. Create a class hierarchy. Function prototyping or class syntax can be used.
+   ([Code](./src/oop)/[Test](./tests/oop-prototypes.spec.ts))
+
+Vehicle
+
+- Vehicle is a base class.
+- All vehicles upon creation receive a `vendor` (manufacturer) name.
+- All vehicles have `start()` method that retunrs a string `"start the <vehicle vendor> vehicle"`
+- `Vehicle` has abstract `honk()` method
+
+Truck
+
+- Class `Truck` inherits from `Vehicle`.
+- `Truck` also receives `numberOfCarriages` parameter upon creation.
+- `honk()` method of `Truck` should return a string `"This is a <vendor> truck with <numberOfCarriages> carriages"`
+- `Truck` should be able to call `start()` method, since `Truck` is a `Vehicle`
+
+Car
+
+- Class `Car` inherits from `Vehicle`.
+- `Car` also receives `interiorColor` parameter upon creation.
+- `honk()` method of `Car` should return a string `"This is a <vendor> car with <interiorColor> interior"`
+- `Car` should be able to call `start()` method, since `Car` is a `Vehicle`
+
 4. Write a function to count the occurrences of a value in an array.
    ([Code](./src/lists/occurence.ts)/[Test](./tests/lists-occurence.spec.ts))
 
@@ -123,6 +150,8 @@ isFirstCharacterUppercase("abcdea"); // -> false
 ```
 
 ## Level 3
+
+---
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
 
