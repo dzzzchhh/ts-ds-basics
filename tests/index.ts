@@ -14,7 +14,10 @@ export class FunctionalTestSuite {
     private testFunction: (input: any) => any
   ) {}
   public addCase(testCase: ITestCase) {
-    this.testCases.push(testCase);
+    this.testCases.push({
+      ...testCase,
+      testCaseLabel: testCase.testCaseLabel || testCase.testInput
+    });
     return this;
   }
   public run() {
