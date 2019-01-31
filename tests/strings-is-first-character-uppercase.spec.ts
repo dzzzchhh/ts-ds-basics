@@ -8,26 +8,26 @@ new FunctionalTestSuite(
   .addCase({
     expectedResult: true,
     testCaseLabel: "A valid case",
-    testInput: "A valid case"
+    testInput: ["A valid case"]
   })
   .addCase({
     expectedResult: false,
     testCaseLabel: "invalid case",
-    testInput: "invalid case"
+    testInput: ["invalid case"]
   })
   .addCase({
     expectedResult: false,
     testCaseLabel: "2nd invalid case",
-    testInput: "2nd invalid case"
+    testInput: ["2nd invalid case"]
   })
   .addCase({
     expectedResult: true,
     testCaseLabel: "ABC",
-    testInput: "ABC"
+    testInput: ["ABC"]
   })
   .addCase({
     expectedResult: false,
     testCaseLabel: "abc",
-    testInput: "abc"
+    testInput: ["abc"]
   })
   .run();

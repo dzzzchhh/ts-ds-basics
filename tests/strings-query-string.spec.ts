@@ -11,6 +11,6 @@ const queryStringSuite = new FunctionalTestSuite(
   .addCase({
     expectedResult: expectedOutput,
     testCaseLabel: "Simple query string",
-    testInput: testObject
+    testInput: [testObject]
   })
   .run();

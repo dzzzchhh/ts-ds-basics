@@ -5,10 +5,14 @@ const firstRecurringCharacterSuite = new FunctionalTestSuite(
   "strings-first-recurring-character",
   getFirstRecurringCharacter
 )
-  .addCase({ expectedResult: "a", testCaseLabel: "abca->a", testInput: "abca" })
+  .addCase({
+    expectedResult: "a",
+    testCaseLabel: "abca->a",
+    testInput: ["abca"]
+  })
   .addCase({
     expectedResult: undefined,
     testCaseLabel: "abc->undefined",
-    testInput: "abc"
+    testInput: ["abc"]
   })
   .run();

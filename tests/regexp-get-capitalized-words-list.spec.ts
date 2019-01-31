@@ -7,10 +7,10 @@ new FunctionalTestSuite(
 )
   .addCase({
     expectedResult: ["Apple", "California"],
-    testInput: "Apple is located in California"
+    testInput: ["Apple is located in California"]
   })
   .addCase({
     expectedResult: ["EA", "FIFA2019"],
-    testInput: "EA releases FIFA2019 later this year"
+    testInput: ["EA releases FIFA2019 later this year"]
   })
   .run();

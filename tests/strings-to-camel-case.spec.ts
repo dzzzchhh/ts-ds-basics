@@ -8,11 +8,11 @@ const camelCaseSuite = new FunctionalTestSuite(
   .addCase({
     expectedResult: "aStringOfValues",
     testCaseLabel: "case-sensitive input",
-    testInput: "A string of values"
+    testInput: ["A string of values"]
   })
   .addCase({
     expectedResult: "anotherValue",
     testCaseLabel: "case-insensitive input",
-    testInput: "another value"
+    testInput: ["another value"]
   })
   .run();

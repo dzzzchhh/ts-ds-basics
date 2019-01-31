@@ -13,11 +13,11 @@ const flattenTestSuite = new FunctionalTestSuite("lists-flatten", flatten)
   .addCase({
     expectedResult: testOutputValues,
     testCaseLabel: testLabelValues,
-    testInput: testInputValues
+    testInput: [testInputValues]
   })
   .addCase({
     expectedResult: testOutputCollection,
     testCaseLabel: testLabelCollection,
-    testInput: testOutputCollection
+    testInput: [testOutputCollection]
   })
   .run();

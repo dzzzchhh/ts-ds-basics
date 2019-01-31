@@ -6,22 +6,19 @@ import "mocha";
  * @interface IFunctionalTestCase
  */
 interface IFunctionalTestCase {
-  testCaseLabel?: string;
   /**
-   * Value to be used as this argument for case when test function should be called with .apply
+   * Value to be used as 'this' argument for the test function be called with .apply
    * @type {*}
    * @memberof IFunctionalTestCase
    */
   testCaseContext?: any;
   /**
-   * Describes whether or not testInput list should be applied to test suite function
-   * @type {boolean}
+   * List of arguments to be passed to function being tested
+   * @type {any[]}
    * @memberof IFunctionalTestCase
-   * @example
-   * testFunction.apply(testCaseContext,testInput)
    */
-  applyArgumentsList?: boolean;
-  testInput: any;
+  testInput: any[];
+  testCaseLabel?: string;
   expectedResult: any;
 }
 
@@ -51,7 +48,7 @@ export class FunctionalTestSuite {
   public addCase(testCase: IFunctionalTestCase) {
     this.testCases.push({
       ...testCase,
-      testCaseLabel: testCase.testCaseLabel || testCase.testInput
+      testCaseLabel: testCase.testCaseLabel || testCase.testInput.toString()
     });
     return this;
   }
@@ -63,17 +60,8 @@ export class FunctionalTestSuite {
     describe(this.suiteName, () => {
       this.testCases.forEach(testCase => {
         it(testCase.testCaseLabel, () => {
-          if (testCase.applyArgumentsList) {
-            const defaultContext = {};
-            expect(
-              this.testFunction.apply(
-                testCase.testCaseContext || defaultContext,
-                testCase.testInput
-              )
-            ).to.eql(testCase.expectedResult);
-            return;
-          }
-          expect(this.testFunction(testCase.testInput)).to.eql(
+          const context = testCase.testCaseContext || {};
+          expect(this.testFunction.apply(context, testCase.testInput)).to.eql(
             testCase.expectedResult
           );
         });
