@@ -133,7 +133,7 @@ countValueOccurences([1, 2, 3, 4, 5, 2, 3, 1, 2], 2); // -> 3
 ```
 
 5. Write a function that returns first recurring character in a string.
-   ([Code](./src/strings/query-string-composer.ts)/[Test](tests/strings-query-string.spec.ts))
+   ([Code](./src/strings/first-recurring-character.ts)/[Test](tests/strings-first-recurring-character.spec.ts))
 
 ```javascript
 getFirstRecurringCharacter("ABCDEA"); // -> “A”
