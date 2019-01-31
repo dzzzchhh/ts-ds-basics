@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/dzmchar/ts-ds-basics.svg?branch=master)](https://travis-ci.com/dzmchar/ts-ds-basics)
 
+Have some excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
+
 ## Level 1
 
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
