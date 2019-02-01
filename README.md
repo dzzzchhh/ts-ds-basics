@@ -203,7 +203,7 @@ getCapitalizedWords("Visit United States of America today!"); // -> ["Visit","Un
 ```
 
 2. Given a string that contains snake_case'd words, return a string where those words are surrounded with round brackets.
-   ([Code](./src/regexp/surround-group.ts )/[Test](./tests/regexp-surround.spec.ts))
+   ([Code](./src/regexp/surround-group.ts)/[Test](./tests/regexp-surround.spec.ts))
 
 ```javascript
 surroundSnakeCase(
