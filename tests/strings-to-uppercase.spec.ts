@@ -1,7 +1,10 @@
 import { FunctionalTestSuite } from ".";
-import { toUppercase } from "../src/strings/to-uppercase";
+import { IToUppercase, toUppercase } from "../src/strings/to-uppercase";
 
-const toUppercaseSuite = new FunctionalTestSuite("to-uppercase", toUppercase)
+const toUppercaseSuite = new FunctionalTestSuite<IToUppercase>(
+  "to-uppercase",
+  toUppercase
+)
   .addCase({
     expectedResult: "AbC",
     testCaseLabel: "Simple string",

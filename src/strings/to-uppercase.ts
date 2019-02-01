@@ -1,4 +1,4 @@
-interface IToUppercase {
+export interface IToUppercase {
   characterSequence: string;
   charactersToUppercase: string[];
 }
