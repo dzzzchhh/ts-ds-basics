@@ -9,7 +9,8 @@ interface ICollectionGroup {
  * @param {ICollectionGroup} parameters
  * @returns {object}
  * @example
- * composeGroupsByProperty([{age:20,name:"Peter"},{age:30,name:"Mike"}]) // -> {20:[{age:20,name:"Peter"}],30:[{age:30,name:"Mike"}]}
+ * composeGroupsByProperty([{age:20,name:"Peter"},{age:30,name:"Mike"}]) 
+ * // -> {20:[{age:20,name:"Peter"}],30:[{age:30,name:"Mike"}]}
  */
 export function composeGroupsByProperty(parameters: ICollectionGroup): object {
   return parameters.collection.reduce((acc, currentItem) => {
