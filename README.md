@@ -201,3 +201,12 @@ toCamelCase("A string of values"); // -> "aStringOfValues";
 ```javascript
 getCapitalizedWords("Visit United States of America today!"); // -> ["Visit","United","States","America"]
 ```
+
+2. Given a string that contains snake_case'd words, return a string where those words are surrounded with round brackets.
+   ([Code](./src/regexp/surround-group.ts )/[Test](./tests/regexp-surround.spec.ts))
+
+```javascript
+surroundSnakeCase(
+  "a_snake_case_word followed by normal word and then snake_case_again"
+); // -> "(a_snake_case_word) followed by normal word and then (snake_case_again)"
+```
