@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.com/dzmchar/ts-ds-basics.svg?branch=master)](https://travis-ci.com/dzmchar/ts-ds-basics)
 
-Have some excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
+Have excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
+
+# Base excercises
 
 ## Level 1
 
@@ -145,6 +147,17 @@ getFirstRecurringCharacter("ABCDEA"); // -> “A”
 ```javascript
 isFirstCharacterUppercase("ABCDEA"); // -> true
 isFirstCharacterUppercase("abcdea"); // -> false
+```
+
+7. Write a function that takes in a collection of items, a parameter value and returns a hash map of lists entities groupped by parameter value
+   ([Code](./src/lists/group-collection-by-property.ts)/[Test](./tests/group-collection-by-property.spec.ts))
+
+```javascript
+composeGroupsByProperty([
+  { age: 20, name: "Peter" },
+  { age: 30, name: "Mike" }
+]);
+// -> {20:[{age:20,name:"Peter"}],30:[{age:30,name:"Mike"}]}
 ```
 
 ## Level 3
