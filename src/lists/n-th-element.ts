@@ -1,6 +1,6 @@
-interface INthParameters {
+export interface IParityMatch {
   list: any[];
-  th: number;
+  matchIndex: number;
 }
 
 /**
@@ -12,7 +12,7 @@ interface INthParameters {
  *
  * @example
  *
- * nth({list:[1,2,3,4,5,6,7,8],th:4}) -> [4,8]
+ * nth({list:[1,2,3,4,5,6,7,8], matchIndex:4}) -> [4,8]
  */
-export const nth = ({ list, th }: INthParameters): any[] =>
-  list.filter((item, index) => (index + 1) % th === 0);
+export const matchListByParity = ({ list, matchIndex }: IParityMatch): any[] =>
+  list.filter((item, index) => (index + 1) % matchIndex === 0);
