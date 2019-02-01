@@ -1,4 +1,4 @@
-interface IListGroup {
+export interface IListGroup {
   items: any[];
   itemsPerPage: number;
 }
