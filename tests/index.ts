@@ -5,7 +5,7 @@ import "mocha";
  * Defines general shape of a functional test case
  * @interface IFunctionalTestCase
  */
-interface IFunctionalTestCase<T> {
+interface IFunctionalTestCase<T, O> {
   /**
    * Value to be used as 'this' argument for the test function be called with .apply
    * @type {*}
@@ -19,7 +19,7 @@ interface IFunctionalTestCase<T> {
    */
   testInput: T[];
   testCaseLabel?: string;
-  expectedResult: any;
+  expectedResult: O;
 }
 
 /**
@@ -27,14 +27,14 @@ interface IFunctionalTestCase<T> {
  * @export
  * @class FunctionalTestSuite
  */
-export class FunctionalTestSuite<T> {
+export class FunctionalTestSuite<T, O> {
   /**
    * List of test cases for a suite
    * @private
    * @type {IFunctionalTestCase[]}
    * @memberof FunctionalTestSuite
    */
-  private testCases: Array<IFunctionalTestCase<T>> = [];
+  private testCases: Array<IFunctionalTestCase<T, O>> = [];
   constructor(
     private suiteName: string,
     private testFunction: (...input: any) => any
@@ -45,7 +45,7 @@ export class FunctionalTestSuite<T> {
    * @returns
    * @memberof FunctionalTestSuite
    */
-  public addCase(testCase: IFunctionalTestCase<T>) {
+  public addCase(testCase: IFunctionalTestCase<T, O>) {
     this.testCases.push({
       ...testCase,
       testCaseLabel: testCase.testCaseLabel || testCase.testInput.toString()
