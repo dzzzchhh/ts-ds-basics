@@ -4,6 +4,8 @@ import "mocha";
 /**
  * Defines general shape of a functional test case
  * @interface IFunctionalTestCase
+ * @template T Type definition for test function inputs
+ * @template O Type definition for test function outputs
  */
 interface IFunctionalTestCase<T, O> {
   /**
@@ -14,7 +16,7 @@ interface IFunctionalTestCase<T, O> {
   testCaseContext?: any;
   /**
    * List of arguments to be passed to function being tested
-   * @type {any[]}
+   * @type {T[]}
    * @memberof IFunctionalTestCase
    */
   testInput: T[];
@@ -26,22 +28,26 @@ interface IFunctionalTestCase<T, O> {
  * Compose dynamic test suites for single-arity functions
  * @export
  * @class FunctionalTestSuite
+ * @template T Type definition for test function inputs
+ * @template O Type definition for test function outputs
  */
 export class FunctionalTestSuite<T, O> {
   /**
    * List of test cases for a suite
    * @private
-   * @type {IFunctionalTestCase[]}
+   * @type {Array<IFunctionalTestCase<T, O>>}
    * @memberof FunctionalTestSuite
    */
   private testCases: Array<IFunctionalTestCase<T, O>> = [];
+
   constructor(
     private suiteName: string,
     private testFunction: (...input: any) => any
   ) {}
+
   /**
    * Adds a new test case to a test suite
-   * @param {IFunctionalTestCase} testCase
+   * @param {IFunctionalTestCase<T, O>} testCase
    * @returns
    * @memberof FunctionalTestSuite
    */
@@ -52,6 +58,7 @@ export class FunctionalTestSuite<T, O> {
     });
     return this;
   }
+
   /**
    * Register and initiate test suite making it visible for test executor
    * @memberof FunctionalTestSuite
