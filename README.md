@@ -160,6 +160,13 @@ composeGroupsByProperty([
 // -> {20:[{age:20,name:"Peter"}],30:[{age:30,name:"Mike"}]}
 ```
 
+8. Write a function that takes in a string and a number `n` of repetitions and returns new string, that is original string repeated `n` times
+   ([Code](./src/strings/character-repeat.ts)/[Test](./tests/strings-compose-character-sequence.spec.ts))
+
+```javascript
+composeCharacterSequence({ sequence: "+", repeatCount: 5 }); // -> "+++++"
+```
+
 ## Level 3
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
