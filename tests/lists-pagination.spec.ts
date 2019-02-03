@@ -1,7 +1,7 @@
 import { composePagination, IListGroup } from "../src/lists/pagination";
 import { FunctionalTestSuite } from "./index";
 
-new FunctionalTestSuite<IListGroup>("lists-group-by", composePagination)
+new FunctionalTestSuite<IListGroup, any[]>("lists-group-by", composePagination)
   .addCase({
     expectedResult: [],
     testCaseLabel: "empty list",

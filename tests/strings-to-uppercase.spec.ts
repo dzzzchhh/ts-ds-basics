@@ -1,7 +1,7 @@
 import { FunctionalTestSuite } from ".";
 import { IToUppercase, toUppercase } from "../src/strings/to-uppercase";
 
-const toUppercaseSuite = new FunctionalTestSuite<IToUppercase>(
+const toUppercaseSuite = new FunctionalTestSuite<IToUppercase, string>(
   "to-uppercase",
   toUppercase
 )

@@ -1,8 +1,8 @@
-import { FunctionalTestSuite } from ".";
 import { IParityMatch, matchListByParity } from "../src/lists/n-th-element";
+import { FunctionalTestSuite } from "./";
 
 const list = [1, 2, 3, 4, 5, 6, 7, 8];
-const nthElementSuite = new FunctionalTestSuite<IParityMatch>(
+const nthElementSuite = new FunctionalTestSuite<IParityMatch, any[]>(
   "n-th list element",
   matchListByParity
 )
