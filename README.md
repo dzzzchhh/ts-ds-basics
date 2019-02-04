@@ -167,6 +167,18 @@ composeGroupsByProperty([
 composeCharacterSequence({ sequence: "+", repeatCount: 5 }); // -> "+++++"
 ```
 
+9. Given a hashmap of values return the key with the highest value
+   ([Code](./src/hashes/find-highest-value.ts)/[Test](./tests/hashes-find-highest-value.spec.ts))
+
+```javascript
+const map = {
+  "Holly Jackson": 250,
+  "Jack Southerland": 100,
+  "Peter Higgins": 50
+};
+findHighestHashValue(map); // -> "Holly Jackson"
+```
+
 ## Level 3
 
 1. Write a function that takes time string and converts it to AM/PM format. (TBD)
