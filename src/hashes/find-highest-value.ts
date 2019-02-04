@@ -3,8 +3,7 @@
  * @param {object} hash
  */
 export function findHighestHashValue(hash: object) {
-  const values = Object.values(hash);
-  const highestValue = Math.max.apply(0, values);
+  const highestValue = Math.max.apply(Math, Object.values(hash));
   for (const i in hash) {
     if (hash[i] === highestValue) {
       return i;
