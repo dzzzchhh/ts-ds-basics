@@ -40,6 +40,12 @@ export class FunctionalTestSuite<T, O> {
    */
   private testCases: Array<IFunctionalTestCase<T, O>> = [];
 
+  /**
+   * Creates an instance of FunctionalTestSuite.
+   * @param {string} suiteName Alias for your test suite
+   * @param {(...input: any) => any} testFunction Function to be used for testing
+   * @memberof FunctionalTestSuite
+   */
   constructor(
     private suiteName: string,
     private testFunction: (...input: any) => any
