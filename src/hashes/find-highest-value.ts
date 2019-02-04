@@ -4,9 +4,9 @@
  */
 export function findHighestHashValue(hash: object) {
   const highestValue = Math.max.apply(Math, Object.values(hash));
-  for (const i in hash) {
-    if (hash[i] === highestValue) {
-      return i;
+  for (const value in hash) {
+    if (hash[value] === highestValue) {
+      return value;
     }
   }
 }
