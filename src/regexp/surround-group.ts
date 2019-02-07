@@ -1,37 +1,36 @@
 interface IStringSurround {
   matcher: RegExp;
   inputString: string;
+}
+
+interface IStringSurroundPrivate extends IStringSurround {
   startSurroundWith: string;
   endSurroundWith?: string;
 }
 
-function surroundSelection(params: IStringSurround): string {
-  const surroundEnd = params.endSurroundWith || params.startSurroundWith; // in case when we need to wrap with quotation marks
-  const replacementTemplate = `${params.startSurroundWith}$1${surroundEnd}`;
-  return params.inputString.replace(params.matcher, replacementTemplate);
+export interface IStringSurroundPublic extends IStringSurround {
+  tagName: string;
 }
 
-/**
- * A utility class for surrounding strings with provided set of parameters
- * @export
- * @class StringSurround
- */
-export class StringSurround {
-  /**
-   * A showcase method
-   * @static
-   * @param {string} input
-   * @param {string} tagName
-   * @returns {string}
-   * @memberof StringSurround
-   */
-  public static surroundWithHTMLTag(input: string, tagName: string): string {
-    const matcher = /(\w*\_\w+)/gi; // simple matcher for valid snake case strings
-    return surroundSelection({
-      endSurroundWith: `</${tagName}>`,
-      inputString: input,
-      matcher,
-      startSurroundWith: `<${tagName}>`
-    });
-  }
-}
+const surroundSelection = ({
+  endSurroundWith,
+  inputString,
+  matcher,
+  startSurroundWith
+}: IStringSurroundPrivate): string => {
+  const surroundEnd = endSurroundWith || startSurroundWith;
+  const replacementTemplate = `${startSurroundWith}$1${surroundEnd}`;
+  return inputString.replace(matcher, replacementTemplate);
+};
+
+export const surroundWithHTMLTag = ({
+  inputString,
+  matcher,
+  tagName
+}: IStringSurroundPublic): string =>
+  surroundSelection({
+    endSurroundWith: `</${tagName}>`,
+    inputString,
+    matcher,
+    startSurroundWith: `<${tagName}>`
+  });
