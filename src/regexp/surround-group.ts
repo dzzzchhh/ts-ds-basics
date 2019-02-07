@@ -21,16 +21,17 @@ export class StringSurround {
    * A showcase method
    * @static
    * @param {string} input
+   * @param {string} tagName
    * @returns {string}
    * @memberof StringSurround
    */
-  public static surroundWithBraces(input: string): string {
+  public static surroundWithHTMLTag(input: string, tagName: string): string {
     const matcher = /(\w*\_\w+)/gi; // simple matcher for valid snake case strings
     return surroundSelection({
-      endSurroundWith: ")",
+      endSurroundWith: `</${tagName}>`,
       inputString: input,
       matcher,
-      startSurroundWith: "("
+      startSurroundWith: `<${tagName}>`
     });
   }
 }
