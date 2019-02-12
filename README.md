@@ -2,6 +2,8 @@
 
 Have excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
 
+[Dart version](https://github.com/dzmchar/dart-ds-basics)
+
 ## Lists
 
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
