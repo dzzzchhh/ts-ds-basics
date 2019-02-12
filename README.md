@@ -196,6 +196,18 @@ surroundSnakeCase(
 ); // -> "<h1>a_snake_case_word</h1> followed by normal word and then <h1>snake_case_again</h1>"
 ```
 
+12. Implement "Fuzzy search" function
+    ([Code](./src/strings/fuzzy-search.ts)/[Test](./tests/strings-fuzzy-search.spec.ts))
+
+```javascript
+fuzzySearch("car", "cartwheel"); // -> true
+fuzzySearch("cwhl", "cartwheel"); // -> true
+fuzzySearch("cwheel", "cartwheel"); // -> true
+fuzzySearch("cartwheel", "cartwheel"); // -> true
+fuzzySearch("cwheeel", "cartwheel"); // -> false
+fuzzySearch("lw", "cartwheel"); // -> false
+```
+
 ## OOP
 
 1. Create a class hierarchy. Function prototyping or class syntax can be used.
