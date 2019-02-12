@@ -95,6 +95,15 @@ const map = {
 findHighestHashValue(map); // -> "Holly Jackson"
 ```
 
+5. Given an object an list of strings return a new object with key names present in a list
+   ([Code](./src/hashes/map-object.ts)/[Test](./tests/hashes-map-object.spec.ts))
+
+```javascript
+const baseObject = { xml: 4, http: 2, rest: 2, js: 10 };
+const baseFields = ["xml", "js"];
+mapObject(baseObject, baseFields); // -> { xml: 4, js: 10 };
+```
+
 ## Strings
 
 1. Write a function that checks whether or not string is a palindrome
