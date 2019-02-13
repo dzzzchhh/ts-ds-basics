@@ -219,6 +219,17 @@ fuzzySearch("cwheeel", "cartwheel"); // -> false
 fuzzySearch("lw", "cartwheel"); // -> false
 ```
 
+13. Implement function that checks for parenthesis validity in a string
+    ([Code](./src/strings/parenthesis-matcher.ts)/[Test](./tests/strings-parenthesis-matcher.spec.ts))
+
+```javascript
+getParenthesisValidity("()"); // -> true
+getParenthesisValidity("()()"); // -> true
+getParenthesisValidity("(()())"); // -> true
+getParenthesisValidity(")("); // -> false
+getParenthesisValidity("())"); // -> false
+```
+
 ## OOP
 
 1. Create a class hierarchy. Function prototyping or class syntax can be used.
