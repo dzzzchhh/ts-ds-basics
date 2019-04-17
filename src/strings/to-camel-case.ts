@@ -11,11 +11,5 @@
 export function toCamelCase(characterSequence: string): string {
   return characterSequence
     .toLowerCase()
-    .split(/\s/g)
-    .map((captionGroup, index) =>
-      index > 0
-        ? captionGroup.replace(/\S/, match => match.toUpperCase())
-        : captionGroup
-    )
-    .join("");
+    .replace(/\s\w/g, match => match.trim().toUpperCase())
 }
