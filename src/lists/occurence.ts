@@ -10,6 +10,7 @@ interface IOccurenceCounterProps {
  * @param {IOccurenceCounterProps} {list,value}
  * @returns {number}
  * @see https://jsperf.com/simple-unique-detection
+ * @see https://jsperf.com/count-the-occurrences More test cases including reduce and for
  */
 export function occurence({ list, value }: IOccurenceCounterProps): number {
   let counter = 0;
