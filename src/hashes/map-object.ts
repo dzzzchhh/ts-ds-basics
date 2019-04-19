@@ -6,11 +6,5 @@
  * @param {string[]} fields
  * @returns {object}
  */
-export const mapObject = (entity: object, fields: string[]): object =>
-  Object.keys(entity).reduce(
-    (accumulator, currentEntityFiled) =>
-      fields.includes(currentEntityFiled)
-        ? { ...accumulator, [currentEntityFiled]: entity[currentEntityFiled] }
-        : accumulator,
-    {}
-  );
+export const mapObject = (entity, fields) =>
+  fields ? fields.reduce((a, c) => ({ ...a, [c]: entity[c] }), {}) : entity;
