@@ -11,3 +11,9 @@
 export function flatten(list: any[]): any[] {
   return Array.prototype.concat.apply([], list);
 }
+
+/* another variant:
+export function flatten(list: any[]): any[] {
+  return [].concat(...list);
+}
+*/
