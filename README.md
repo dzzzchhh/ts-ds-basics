@@ -9,10 +9,15 @@ Have excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
 1. Flatten array of arrays ([Code](./src/lists/flatten.ts)/[Test](./tests/lists-flatten.spec.ts))
 
 ```javascript
-flatten([[1, 2], [3, 4], [5, 6]]); // -> [1,2,3,4,5,6]
+flatten([
+  [1, 2],
+  [3, 4],
+  [5, 6]
+]); // -> [1,2,3,4,5,6]
 ```
 
 2. Given list of integers return sum of all the list's elements
+   ([Code](./src/lists/sum-elements.ts)/[Test](./tests/lists-sum-elements.spec.ts))
 
 ```javascript
 sum([1, 2, 3, 4]); // -> 10
@@ -52,6 +57,13 @@ arrayValueDiff([3, 3, 3]); // -> 0
 
 ```javascript
 countValueOccurences([1, 2, 3, 4, 5, 2, 3, 1, 2], 2); // -> 3
+```
+
+8. Given list of integers return multiplication of all the list's elements
+   ([Code](./src/lists/multiply-elements.ts)/[Test](./tests/lists-multiply-elements.spec.ts))
+
+```javascript
+multiply([1, 2, 3, 4]); // -> 24
 ```
 
 ## Objects
