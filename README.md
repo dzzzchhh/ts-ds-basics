@@ -118,6 +118,20 @@ const baseFields = ["xml", "js"];
 mapObject(baseObject, baseFields); // -> { xml: 4, js: 10 };
 ```
 
+6. Given a string that represents a chain of object properties return the value from the chain
+   ([Code](./src/hashes/find-in-chain.ts)/[Test](./tests/hashes-find-in-chain.spec.ts))
+```javascript
+const data = {
+    version: "0.6",
+    account: {
+        isProtected: true
+    }
+};
+searchInChain("version",data); // -> 0.6
+searchInChain("account",data); // -> {isProtected: true}
+searchInChain("account.isProtected",data); // -> true
+```
+
 ## Strings
 
 1. Write a function that checks whether or not string is a palindrome
