@@ -3,4 +3,4 @@ script:
   - npm test
   - npm run lint
 node_js:
-  - "10"
+  - "16"
