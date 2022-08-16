@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.com/dzmchar/ts-ds-basics.svg?branch=master)](https://travis-ci.com/dzmchar/ts-ds-basics)
-
 Have excercises to suggest? See [Contribution guide](./CONTRIBUTING.md)
-
-[Dart version](https://github.com/dzmchar/dart-ds-basics)
 
 ## Lists
 
@@ -255,29 +251,3 @@ getParenthesisValidity("(()())"); // -> true
 getParenthesisValidity(")("); // -> false
 getParenthesisValidity("())"); // -> false
 ```
-
-## OOP
-
-1. Create a class hierarchy. Function prototyping or class syntax can be used.
-   ([Code](./src/oop)/[Test](./tests/oop-prototypes.spec.ts))
-
-Vehicle
-
-- Vehicle is a base class.
-- All vehicles upon creation receive a `vendor` (manufacturer) name.
-- All vehicles have `start()` method that retunrs a string `"start the <vehicle vendor> vehicle"`
-- `Vehicle` has abstract `honk()` method
-
-Truck
-
-- Class `Truck` inherits from `Vehicle`.
-- `Truck` also receives `numberOfCarriages` parameter upon creation.
-- `honk()` method of `Truck` should return a string `"This is a <vendor> truck with <numberOfCarriages> carriages"`
-- `Truck` should be able to call `start()` method, since `Truck` is a `Vehicle`
-
-Car
-
-- Class `Car` inherits from `Vehicle`.
-- `Car` also receives `interiorColor` parameter upon creation.
-- `honk()` method of `Car` should return a string `"This is a <vendor> car with <interiorColor> interior"`
-- `Car` should be able to call `start()` method, since `Car` is a `Vehicle`
